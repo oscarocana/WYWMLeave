@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leave Management App</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <header>
+    <img src="https://socialoutcomes.com.au/wp-content/uploads/2019/09/WithYouWithMe-Project.png" alt="Company Logo" class="logo">
+    <h1>Leave Management App</h1>
+    <nav>
+      <ul>
+        <li><a href="dashboard.html" class="nav-link"><i class="fas fa-tachometer-alt"></i><br>Dashboard</a></li>
+        <li><a href="leave_request.html" class="nav-link"><i class="fas fa-calendar-plus"></i><br>Leave Request</a></li>
+        <li><a href="leave_approval.html" class="nav-link"><i class="fas fa-check-circle"></i><br>Leave Approval</a></li>
+        <li><a href="leave_balance.html" class="nav-link"><i class="fas fa-hourglass"></i><br>Leave Balance</a></li>
+        <li><a href="company_holidays.html" class="nav-link"><i class="fas fa-globe"></i><br>Company Holidays</a></li>
+        <li><a href="profile_settings.html" class="nav-link"><i class="fas fa-user-cog"></i><br>Profile Settings</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <!-- Content for the Dashboard section -->
+      <section id="dashboard" class="content-section">
+        <h2>Welcome, Blank User</h2>
+        <img src="https://th.bing.com/th/id/OIP.Cl56H6WgxJ8npVqyhefTdQHaHa?pid=ImgDet&rs=1" alt="Profile Picture" class="profile-pic">
+
+        <div class="leave-status">
+          <div>
+            <h3>Vacation</h3>
+            <p>Booked: 5 days</p>
+            <p>Used: 3 days</p>
+            <p>Left: 2 days</p>
+          </div>
+
+          <div>
+            <h3>Sick Leave</h3>
+            <p>Booked: 3 days</p>
+            <p>Used: 1 day</p>
+            <p>Left: 2 days</p>
+          </div>
+
+          <!-- Add more leave types as needed -->
+        </div>
+
+        <div class="leave-dropdown">
+          <label for="leave-type">Select Leave Type:</label>
+          <select id="leave-type" onchange="showLeaveInfo()">
+            <option value="vacation">Vacation</option>
+            <option value="sick_leave">Sick Leave</option>
+            <!-- Add more options for other leave types -->
+          </select>
+          <div id="leave-info"></div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
