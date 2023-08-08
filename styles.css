@@ -116,6 +116,7 @@ button {
   /* Forms */
   form {
     margin: 20px 0;
+    width: 50%;
   }
   
   input[type="text"],
